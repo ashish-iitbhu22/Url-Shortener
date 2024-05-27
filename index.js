@@ -9,7 +9,7 @@ const app = express();
 
 app.use(cors());
 
-app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 connectToDatabase("mongodb://127.0.0.1:27017/ashish-project").then(res=>{
     console.log("Mongo connected")

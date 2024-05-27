@@ -25,8 +25,8 @@ async function getUrlbyId(req, res) {
   if (!url) {
     return res.status(404).json({ success: false, message: "Url not found" });
   }
-  return res.status(200).json(url.url);
-}
+  return res.redirect(`https://${url.url}`);
+} 
 
 module.exports = {
   shortUrl,
